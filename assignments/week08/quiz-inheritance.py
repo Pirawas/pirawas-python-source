@@ -6,3 +6,25 @@ Create a class hierarchy:
     Implement a method get_info() in both classes
 
 """
+class Vehicle:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def get_info(self):
+        return f"Vehicle info: \nBrand: {self.brand}, Model: {self.model}, year: {self.year}"
+
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year, number_of_doors):
+        super().__init__(brand, model, year)
+        self.number_of_doors = number_of_doors
+
+    def get_info(self):
+        return f"Car info: \nBrand: {self.brand}, Model: {self.model}, Year: {self.year}, NUmber of Doors: {self.number_of_doors}"
+vehicle = Vehicle("Honda", "Civic", "2019")
+print(vehicle.get_info())
+
+car = Car("Toyota", "City", "2021", "5")
+print(car.get_info())

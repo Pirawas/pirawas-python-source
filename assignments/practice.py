@@ -28,3 +28,4 @@ else: #จะทำที่นี้ก็ต่อเมื่อไม่ม�
     print("Calculation Successful")
 finally: #ทำเสมอไม่ว่าจะมี Exception เกิดขึ้นก็ตาม
     print("End")
+
